@@ -8,6 +8,8 @@
     $pays     = $_POST['pays'    ];
     $action   = $_POST['action'  ];
 
+    password_hash($mdp,PASSWORD_BCRYPT);
+
     if($action=='mailer'){
         echo 'Voici vos identifiants d\'inscription: '.$id.'<br>'.PHP_EOL;
         echo 'Email: '.$mail.'<br>'.PHP_EOL;
