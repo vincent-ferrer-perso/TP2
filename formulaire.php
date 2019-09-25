@@ -1,7 +1,7 @@
 <?php
     echo '<form method="POST" action="data-processing.php">
                 <label for="Id">Identifiant : </label><br>
-                <input type="text" id="Id" required placeholder="Ex: foufou32" ><br>
+                <input type="text" id="Id" required placeholder="Ex: foufou32" name="id" ><br>
                 
                 <label>Civilité : </label><br>
                 <label for="man">Homme<input id="man" type="radio" value="man"></label>
@@ -9,7 +9,7 @@
                 
     
                 <label for="mail">Mail : </label><br>
-                <input type="text" id="prenom" required placeholder="Ex: toutou@mail.fr" name="prenom"><br>
+                <input type="text" id="mail" required placeholder="Ex: toutou@mail.fr"><br>
 
 
                
@@ -20,7 +20,7 @@
                 <input  type="password" id="mdpV"><br>
                 
                 
-                <label for="country">Country</label><span style="color: red !important; display: inline; float: none;">*</span>      
+                <label for="country">Country</label>     
         
                     <select id="country" name="country" class="form-control">
                         <option value="Afghanistan">Afghanistan</option>
@@ -40,5 +40,5 @@
                 
 
                     
-                <label for=soumettre><input id="soumettre" type="submit" value="mailer"></label>
+                <label for=soumettre><input id="soumettre" type="submit" name="action" value="mailer"></label>
             </form>';
