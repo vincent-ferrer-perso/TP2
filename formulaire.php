@@ -40,5 +40,5 @@
                 
 
                     
-                <label for=soumettre><input id="soumettre" type="submit" name="action" value="maier"></label>
+                <label for=soumettre><input id="soumettre" type="submit" name="action" value="mailer"></label>
             </form>';
