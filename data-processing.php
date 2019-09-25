@@ -9,8 +9,8 @@
     $action   = $_POST['action'  ];
 
     if($action=='mailer'){
-        echo 'Voici vos identifiants d\'inscription: '.$id.PHP_EOL;
-             'Email: '.$mail.PHP_EOL;
+        echo 'Voici vos identifiants d\'inscription: '.$id.PHP_EOL.
+             'Email: '.$mail.PHP_EOL.
              'Mot de passe: '.$mdp.PHP_EOL;
     }else{
         echo'<br/><strong>Bouton non géré!</strong><br/>';
