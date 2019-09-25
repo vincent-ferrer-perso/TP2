@@ -10,10 +10,10 @@
 
     $mdp = password_hash($mdp,PASSWORD_BCRYPT);
 
-    $message = 'Voici vos identifiants d\'inscription: ' .$id.'<br>'.
-                'Email:' .$mail.'<br>'.
-                'Mot de passe: '.$mdp.'<br>'.
-                'Pays: '.$pays.'<br>';
+    $message = 'Voici vos identifiants d\'inscription: ' .$id.'\n'.
+                'Email:' .$mail.'\n'.
+                'Mot de passe: '.$mdp.'\n'.
+                'Pays: '.$pays.'\n';
 
 
     if($action=='mailer'){
