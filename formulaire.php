@@ -4,8 +4,8 @@
                 <input type="text" id="Id" required placeholder="Ex: foufou32" name="id" ><br>
                 
                 <label>Civilité : </label><br>
-                <label for="man">Homme<input id="man" type="radio" value="man" name="civilite"></label>
-                <label  for="woman">Femme<input id="woman" type="radio" value="woman" name="civilite"></label><br>
+                <label for="man">Homme<input id="man" type="radio" value="Homme" name="civilite"></label>
+                <label  for="woman">Femme<input id="woman" type="radio" value="Femme" name="civilite"></label><br>
                 
     
                 <label for="mail">Mail : </label><br>
