@@ -10,11 +10,15 @@
 
     $mdp = password_hash($mdp,PASSWORD_BCRYPT);
 
+    $message = 'Voici vos identifiants d\'inscription: ' .$id.'<br>'.
+                'Email:' .$mail.'<br>'.
+                'Mot de passe: '.$mdp.'<br>'.
+                'Pays: '.$pays.'<br>';
+
+
     if($action=='mailer'){
-        echo 'Voici vos identifiants d\'inscription: '.$id.'<br>'.PHP_EOL;
-        echo 'Email: '.$mail.'<br>'.PHP_EOL;
-        echo 'Mot de passe: '.$mdp.'<br>'.PHP_EOL;
-        echo 'Pays: '.$pays.'<br>'.PHP_EOL;
+        mail('vincent.ferrer@etu.univ-amu.fr','TD2 Identifiants',$message);
+
     }else{
         echo'<br/><strong>Bouton non géré!</strong><br/>';
     }
