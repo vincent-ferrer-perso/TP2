@@ -23,13 +23,13 @@
     if(mysqli_num_rows($dbResult) != NULL) {
         while ($dbRow = mysqli_fetch_assoc($dbResult)) {
             if ($mdp != $dbRow['MotDePasse']) {
-                echo 'Pas bon';
+                echo 'MDP Pas bon';
             } else {
                 header('Location: logOK.php');
             }
         }
     }else{
-        echo 'pas dans la base';
+        echo 'mauvais username';
     }
 
 
