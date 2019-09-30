@@ -17,7 +17,7 @@
 
 
     if($action=='mailer'){
-        mail('vincent.ferrer@etu.univ-amu.fr','TD2 Identifiants',$message);
+        mail('EntrerMailDuRecepteur','TD2 Identifiants',$message);
 
     }else{
         echo'<br/><strong>Bouton non géré!</strong><br/>';
@@ -34,7 +34,6 @@
 
     $query = 'INSERT INTO user(NomUtilisateur,Civilite,Mail,MotDePasse,Pays) 
                 VALUES (\''.$id.'\',\''.$civilite.'\',\''.$mail.'\',\''.$mdp.'\',\''.$pays.'\')';
-
 
     if(!($dbResult=mysqli_query($dbLink, $query))){
         echo'Erreur dans requête<br/>';               //Affiche le type d'erreur.
