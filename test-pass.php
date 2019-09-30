@@ -12,10 +12,6 @@
 
     $query = 'SELECT NomUtilisateur FROM user WHERE NomUtilisateur = \''.$id.'\'';
     
-    if(!($dbResult=mysqli_query($dbLink, $query))) {
-        header('Location: https://www.google.fr');
-    }
-
     while(!($dbResult=mysqli_query($dbLink, $query))){
         echo'Erreur de requête<br/>';//Affiche le type d'erreur
         echo 'Erreur: '.mysqli_error($dbLink).'<br/>';//Affiche la requête envoyée.
