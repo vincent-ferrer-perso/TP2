@@ -33,7 +33,7 @@
     or die('Erreur dans la sélection de la base:'.mysqli_error($dbLink));
 
     $query = 'INSERT INTO user(NomUtilisateur,Civilite,Mail,MotDePasse,Pays,DateInscription) 
-                VALUES (\''.$id.'\',\''.$civilite.'\',\''.$mail.'\',\''.$mdp.'\',\''.$pays.')';
+                VALUES (\''.$id.'\',\''.$civilite.'\',\''.$mail.'\',\''.$mdp.'\',\''.$pays.'\')';
 
 
     if(!($dbResult=mysqli_query($dbLink, $query))){
