@@ -20,7 +20,7 @@
         exit();
     }
 
-    if(var_dump($dbResult)) {
+    if(mysqli_num_rows($dbResult) != NULL) {
         while ($dbRow = mysqli_fetch_assoc($dbResult)) {
             if ($mdp != $dbRow['MotDePasse']) {
                 echo 'Pas bon';
