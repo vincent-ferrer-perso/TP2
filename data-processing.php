@@ -8,7 +8,7 @@
     $pays     = $_POST['pays'    ];
     $action   = $_POST['action'  ];
 
-    $mdp = password_hash($mdp,PASSWORD_BCRYPT);
+    $mdp = md5($mdp);
 
     $message = 'Voici vos identifiants d\'inscription: ' .$id."\n".
                 'Email:' .$mail."\n".

@@ -7,10 +7,10 @@
     or die('Erreur dans la sélection de la base:'.mysqli_error($dbLink));
 
 
-    $Login  = $_POST['Login'];
-    $mdp = password_hash($_POST['mdp'],PASSWORD_BCRYPT);
+    $Login = $_POST['Login'];
+    $mdp = md5($_POST['mdp']);
 
-    $query = 'SELECT NomUtilisateur FROM user WHERE NomUtilisateur = \''.$Login.'\'';
+    $query = 'SELECT MotDePasse FROM user WHERE NomUtilisateur = \''.$Login.'\'';
     $dbResult=mysqli_query($dbLink, $query);
 
     if(!$dbResult){
@@ -20,9 +20,9 @@
         exit();
     }
 
-    if(!is_null($dbResult)) {
+    if(var_dump($dbResult)) {
         while ($dbRow = mysqli_fetch_assoc($dbResult)) {
-            if ($Login != $dbRow['NomUtilisateur']) {
+            if ($mdp != $dbRow['MotDePasse']) {
                 echo 'Pas bon';
             } else {
                 header('Location: logOK.php');
