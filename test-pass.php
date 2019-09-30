@@ -22,8 +22,8 @@
         echo 'Requête: '.$query.'<br/>';
         exit();
     }
-    if($id == mysqli_fetch_assoc($dbResult)){
-        echo 'Bien minot';
+    if($id == $dbRow=mysqli_fetch_assoc($dbResult)){
+        var_dump($dbRow);
     }else{
         header('Location: https://www.google.fr');
     }
