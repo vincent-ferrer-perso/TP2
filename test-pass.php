@@ -22,7 +22,7 @@
         echo 'Requête: '.$query.'<br/>';
         exit();
     }
-    if($id == $dbRow=mysqli_fetch_assoc($dbResult)){
+    if($id == mysqli_fetch_assoc($dbResult)){
         echo 'Bien minot';
     }else{
         header('Location: https://www.google.fr');
