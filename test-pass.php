@@ -10,7 +10,9 @@
     $id  = $_POST['id'];
     $mdp = password_hash($_POST['mdp'],PASSWORD_BCRYPT);
 
-    if(!('SELECT NomUtilisateur FROM user WHERE NomUtilisateur = \''.$id.'\'')) {
+    $query = 'SELECT NomUtilisateur FROM user WHERE NomUtilisateur = \''.$id.'\'';
+    
+    if(!($dbResult=mysqli_query($dbLink, $query))) {
         header('Location: https://www.google.fr');
     }
 
