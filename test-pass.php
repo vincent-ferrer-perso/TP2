@@ -19,13 +19,16 @@
         exit();
     }
 
-
-    while($dbRow=mysqli_fetch_assoc($dbResult)){
+    if($dbResult != NULL) {
+        while ($dbRow = mysqli_fetch_assoc($dbResult)) {
             if ($Login != $dbRow['NomUtilisateur']) {
                 echo 'Pas bon';
             } else {
                 header('Location: logOK.php');
             }
+        }
+    }else{
+        echo 'pas dans la base';
     }
 
 
