@@ -23,7 +23,10 @@
         exit();
     }
 
-    if($id == $dbRow=mysqli_fetch_assoc($dbResult)){
+    $dbRow=mysqli_fetch_assoc($dbResult);
+
+
+    if($id == $dbRow['NomUtilisateur'] ){
         var_dump($dbRow);
     }else{
         header('Location: https://www.google.fr');
