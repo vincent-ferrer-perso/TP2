@@ -11,17 +11,19 @@
     $mdp = password_hash($_POST['mdp'],PASSWORD_BCRYPT);
 
     $query = 'SELECT NomUtilisateur FROM user WHERE NomUtilisateur = \''.$id.'\'';
-    
+
     if(!($dbResult=mysqli_query($dbLink, $query))){
         echo'Erreur de requête<br/>';//Affiche le type d'erreur
-        echo 'Erreur: '.mysqli_error($dbLink).'<br/>';//Affiche la requête envoyée.
         echo 'Requête: '.$query.'<br/>';
+        echo 'Erreur: '.mysqli_error($dbLink).'<br/>';//Affiche la requête envoyée.
         exit();
     }
+
 
     while($dbRow=mysqli_fetch_assoc($dbResult)){
         echo 'Nom d\'utilisateur : '.$dbRow['NomUtilisateur' ].'<br/>';
         echo '<br/><br/>';
+
     }
 
 
