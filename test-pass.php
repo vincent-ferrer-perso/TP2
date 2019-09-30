@@ -11,15 +11,16 @@
     $mdp = password_hash($_POST['mdp'],PASSWORD_BCRYPT);
 
     $query = 'SELECT NomUtilisateur FROM user WHERE NomUtilisateur = \''.$Login.'\'';
+    $dbResult=mysqli_query($dbLink, $query);
 
-    if(!($dbResult=mysqli_query($dbLink, $query))){
+    if(!$dbResult){
         echo'Erreur de requête<br/>';//Affiche le type d'erreur
         echo 'Requête: '.$query.'<br/>';
         echo 'Erreur: '.mysqli_error($dbLink).'<br/>';//Affiche la requête envoyée.
         exit();
     }
 
-    if(!mysqli_fetch_assoc($dbResult)['NomUtilisateur']) {
+    if(mysqli_num_rows($dbResult)!=0) {
         while ($dbRow = mysqli_fetch_assoc($dbResult)) {
             if ($Login != $dbRow['NomUtilisateur']) {
                 echo 'Pas bon';
