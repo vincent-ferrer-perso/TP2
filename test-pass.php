@@ -20,7 +20,7 @@
         exit();
     }
 
-    if(mysqli_num_rows($dbResult)!=0) {
+    if(!empty($dbResult)) {
         while ($dbRow = mysqli_fetch_assoc($dbResult)) {
             if ($Login != $dbRow['NomUtilisateur']) {
                 echo 'Pas bon';
