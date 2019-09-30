@@ -21,8 +21,8 @@
 
 
     while($dbRow=mysqli_fetch_assoc($dbResult)){
-        echo 'Nom d\'utilisateur : '.$dbRow['NomUtilisateur' ].'<br/>';
-        echo '<br/><br/>';
+        if($Login == $dbRow['NomUtilisateur' ]) echo 'bien minot';
+        else header('Location: https://www.google.fr');
 
     }
 
