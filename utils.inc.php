@@ -3,7 +3,8 @@ function start_page($title){
     echo ' <!DOCTOTYPE html><html 
             lang="fr"><head><title>'.PHP_EOL.$title.'</title></head><body>'.PHP_EOL;
 
-    echo '<hr><strong>'.$title.'</strong></hr>';
+    echo '<hr><strong>'.$title.'</strong></hr><br/>';
+    echo '<hr></hr>';
 };
 
 function end_page(){

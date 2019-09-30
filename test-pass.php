@@ -22,7 +22,7 @@
 
     while($dbRow=mysqli_fetch_assoc($dbResult)){
         if($Login == $dbRow['NomUtilisateur' ]) header('Location: logOK.php');
-        else header('Location: erreur.php');
+        else header('Location: error.php');
 
     }
 
