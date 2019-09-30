@@ -13,6 +13,6 @@
     $query = 'SELECT NomUtilisateur FROM user WHERE NomUtilisateur = \''.$id.'\'';
     
     if(!($dbResult=mysqli_query($dbLink, $query))) {
-        header('Location: https://www.google.fr');
+        echo 'marche pas';
     }
 
