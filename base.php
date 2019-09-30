@@ -19,9 +19,9 @@
 
 
     while($dbRow=mysqli_fetch_assoc($dbResult)){
-        echo $dbRow['NomUtilisateur' ].'<br/>';
-        echo $dbRow['Mail'           ].'<br/>';
-        echo $dbRow['DateInscription'].'<br/>';
+        echo 'Nom d\'utilisateur :'.$dbRow['NomUtilisateur' ].'<br/>';
+        echo 'Mail '.$dbRow['Mail'           ].'<br/>';
+        echo 'Date d\'inscription '.$dbRow['DateInscription'].'<br/>';
         echo '<br/><br/>';
 
     }
