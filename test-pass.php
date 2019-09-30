@@ -21,8 +21,11 @@
 
 
     while($dbRow=mysqli_fetch_assoc($dbResult)){
-        if($Login == $dbRow['NomUtilisateur' ]) header('Location: logOK.php');
-        else echo 'Pas bon';
+        if($Login == $dbRow['NomUtilisateur' ]) {
+            header('Location: logOK.php');
+        }else {
+            echo 'Pas bon';
+        }
 
     }
 
