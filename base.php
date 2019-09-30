@@ -3,7 +3,7 @@
     or die('Erreur de connexion au serveur: ' .mysqli_connect_error());
 
 
-    mysqli_select_db($dbLink,vincentferrer_tp_php)
+    mysqli_select_db($dbLink,'vincentferrer_tp_php')
     or die('Erreur dans la sélection de la base:'.mysqli_error($dbLink));
 
 
