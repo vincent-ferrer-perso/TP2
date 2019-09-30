@@ -26,11 +26,8 @@
 
 
     while($dbRow=mysqli_fetch_assoc($dbResult)){
-        if($id == $dbRow['NomUtilisateur'] ){
-            echo 'bien';
-        }else{
-            header('Location: https://www.google.fr');
-        }
+        echo 'Nom d\'utilisateur : '.$dbRow['NomUtilisateur' ].'<br/>';
+        echo '<br/><br/>';
     }
 
 
