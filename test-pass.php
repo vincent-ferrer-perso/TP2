@@ -21,16 +21,11 @@
 
 
     while($dbRow=mysqli_fetch_assoc($dbResult)){
-        if($dbRow != NULL) {
-            if ($Login == $dbRow['NomUtilisateur']) {
-                header('Location: logOK.php');
-            } else {
+            if ($Login != $dbRow['NomUtilisateur']) {
                 echo 'Pas bon';
+            } else {
+                header('Location: logOK.php');
             }
-        }else{
-            echo 'inexistant dans la base de donnée';
-        }
-
     }
 
 
