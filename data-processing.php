@@ -32,7 +32,7 @@
     mysqli_select_db($dbLink,'vincentferrer_tp_php')
     or die('Erreur dans la sélection de la base:'.mysqli_error($dbLink));
 
-    $query = 'INSERT INTO user(NomUtilisateur,Civilite,Mail,MotDePasse,Pays,DateInscription) 
+    $query = 'INSERT INTO user(NomUtilisateur,Civilite,Mail,MotDePasse,Pays) 
                 VALUES (\''.$id.'\',\''.$civilite.'\',\''.$mail.'\',\''.$mdp.'\',\''.$pays.'\')';
 
 
