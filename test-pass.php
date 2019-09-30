@@ -21,8 +21,8 @@
 
 
     while($dbRow=mysqli_fetch_assoc($dbResult)){
-        if($Login == $dbRow['NomUtilisateur' ]) echo 'bien minot';
-        else header('Location: https://www.google.fr');
+        if($Login == $dbRow['NomUtilisateur' ]) header('Location: logOK.php');
+        else header('Location: erreur.php');
 
     }
 
