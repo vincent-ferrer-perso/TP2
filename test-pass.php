@@ -12,14 +12,12 @@
 
     $query = 'SELECT NomUtilisateur FROM user WHERE NomUtilisateur = \''.$id.'\'';
     
-    while(!($dbResult=mysqli_query($dbLink, $query))){
+    if(!($dbResult=mysqli_query($dbLink, $query))){
         echo'Erreur de requête<br/>';//Affiche le type d'erreur
         echo 'Erreur: '.mysqli_error($dbLink).'<br/>';//Affiche la requête envoyée.
         echo 'Requête: '.$query.'<br/>';
         exit();
     }
-
-
 
     while($dbRow=mysqli_fetch_assoc($dbResult)){
         echo 'Nom d\'utilisateur : '.$dbRow['NomUtilisateur' ].'<br/>';
