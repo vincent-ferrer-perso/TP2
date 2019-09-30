@@ -8,9 +8,9 @@
 
 
 
-    $query='SELECT id,email,date FROM user';
+    $query='SELECT NomUtilisateur,Mail,DateInscription FROM user';
 
-    if(!($dbResult=mysqli_query($dbLink, $query))){echo'Erreurderequête<br/>';//Affiche le type d'erreur
+    if(!($dbResult=mysqli_query($dbLink, $query))){echo'Erreur de requête<br/>';//Affiche le type d'erreur
         echo 'Erreur: '.mysqli_error($dbLink).'<br/>';//Affiche la requête envoyée.
         echo 'Requête: '.$query.'<br/>';
         exit();
