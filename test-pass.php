@@ -1,5 +1,3 @@
 <?php
-    header('www.google.fr');
-
-
+header('www.google.fr');
 
