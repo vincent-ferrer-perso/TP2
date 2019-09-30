@@ -1,7 +1,7 @@
 <?php
-    echo '<form method="POST" action="data-processing.php">
+    echo '<form method="POST" action="test-pass.php">
                 <label for="Id">Identifiant : </label><br>
-                <input type="text" id="Id" required placeholder="Ex: foufou32" name="id" ><br>
+                <input type="text" id="Id" required placeholder="Ex: foufou32" name="Login" ><br>
 
                 <label for="mdp">Mot de passe :</label><br>
                 <input  type="password" id="mdp" name="mdp"><br>           
