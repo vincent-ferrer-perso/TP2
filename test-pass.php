@@ -1,3 +1,3 @@
 <?php
-header('www.google.fr');
+header('Location: www.google.fr');
 
