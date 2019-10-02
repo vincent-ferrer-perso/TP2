@@ -26,7 +26,7 @@
         $usernameBD = $dbRow['NomUtilisateur'];
     }
 
-    if ($usernameBD == $Login )
+    if ($usernameBD == $Login && $mdpBD == $mdp)
         header('Location: logOK.php');
     else
         echo 'Login et/ou mot de passe Incorrect';
