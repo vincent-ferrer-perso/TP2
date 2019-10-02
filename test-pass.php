@@ -10,7 +10,7 @@
     $Login = $_POST['Login'];
     $mdp = md5($_POST['mdp']);
 
-    $query = 'SELECT MotDePasse FROM user WHERE NomUtilisateur = \''.$Login.'\'';
+    $query = 'SELECT NomUtilisateur, MotDePasse FROM user WHERE NomUtilisateur = \''.$Login.'\'';
     $dbResult=mysqli_query($dbLink, $query);
 
     if(!$dbResult){
@@ -30,8 +30,6 @@
         header('Location: logOK.php');
     else
         echo 'Login et/ou mot de passe Incorrect';
-
-
 
 
 
