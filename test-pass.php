@@ -20,17 +20,23 @@
         exit();
     }
 
-    if(mysqli_num_rows($dbResult) != NULL) {
-        while ($dbRow = mysqli_fetch_assoc($dbResult)) {
-            if ($mdp != $dbRow['MotDePasse']) {
-                echo 'MDP Pas bon';
-            } else {
-                header('Location: logOK.php');
-            }
-        }
-    }else{
-        echo 'mauvais username';
+
+    while ($dbRow = mysqli_fetch_assoc($dbResult)) {
+        $mdpBD = $dbRow['MotDePasse'];
+        $usernameBD = $dbRow['NomUtilisateur'];
     }
+
+    if ($usernameBD == $Login && $mdpBD == $mdp)
+        header('Location: logOK.php');
+    else if($usernameBD == $Login && $mdpBD != $mdp)
+        echo 'Mot de Passe Incorrect';
+    else if($usernameBD != $Login && $mdpBD == $mdp)
+        echo 'Login Incorrect';
+    else
+        echo 'Login et mot de passe Incorrect';
+
+
+
 
 
 
