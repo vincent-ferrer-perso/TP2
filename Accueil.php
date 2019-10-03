@@ -1,2 +1,2 @@
-<a href="formulaire.php"></a>
-<a href='login.php?step=LOGIN'></a>
+<a href="formulaire.php">Formulaire inscription</a>
+<a href='login.php?step=LOGIN'>Login</a>
