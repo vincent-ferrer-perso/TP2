@@ -29,9 +29,7 @@
 
     if ($usernameBD == $Login && $mdpBD == $mdp) {
         header('Location: logOK.php');
-        $_SESSION['connnexion'] = 'ok';
-        $_SESSION['loginSession'] = $Login;
-        $_SESSION['mdpSession'] = $mdp;
+
     }
     else
         header('Location: login.php?step=ERROR');
