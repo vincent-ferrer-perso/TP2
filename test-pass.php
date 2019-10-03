@@ -1,5 +1,5 @@
 <?php
-
+    session_start();
     $dbLink=mysqli_connect('mysql-vincentferrer.alwaysdata.net',173776,'Vf36@13300')
     or die('Erreur de connexion au serveur: ' .mysqli_connect_error());
 
@@ -29,7 +29,9 @@
 
     if ($usernameBD == $Login && $mdpBD == $mdp) {
         header('Location: logOK.php');
-
+        $_SESSION['connexion'] = 'ok';
+        $_SESSION['loginSession'] = $Login;
+        $_SESSION['mdpSession'] = $mdp;
     }
     else
         header('Location: login.php?step=ERROR');
